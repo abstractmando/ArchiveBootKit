@@ -1,3 +1,6 @@
+#include <Base.h>
+#include <Library/BaseMemoryLib.h>
+#include <Library/MemoryAllocationLib.h>
 #include "EncryptFS.h"
 
 EFI_STATUS

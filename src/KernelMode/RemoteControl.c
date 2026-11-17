@@ -1,4 +1,6 @@
 #include "RemoteControl.h"
+#include "../Shared/Utils.h"
+#include "../Shared/MemTools.h"
 #include "CommandExec.h"
 #include "../Shared/Logger.h"
 #include "../Shared/MemTools.h"

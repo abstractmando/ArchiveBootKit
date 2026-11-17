@@ -46,7 +46,7 @@ BOOLEAN WritePhysMem(EFI_PHYSICAL_ADDRESS Address, CONST VOID* Buffer, UINTN Siz
     return TRUE;
 }
 
-VOID* FindPattern(VOID* Base, UINTN Size, CONST UINT8* Pattern, CONST CHAR* Mask) {
+VOID* FindPattern(VOID* Base, UINTN Size, CONST UINT8* Pattern, CONST CHAR8* Mask) {
     for (UINTN i = 0; i <= Size - 1; i++) {
         BOOLEAN Found = TRUE;
         for (UINTN j = 0; Mask[j]; j++) {

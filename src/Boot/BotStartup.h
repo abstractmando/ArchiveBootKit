@@ -1,6 +1,8 @@
-#ifndef SYRIAL_BOTSTARTUP_H
-#define SYRIAL_BOTSTARTUP_H
+#ifndef BOOT_STARTUP_H
+#define BOOT_STARTUP_H
 
-VOID KernelMain(VOID);
+#include <Uefi.h>
+
+EFI_STATUS KernelMain(EFI_SYSTEM_TABLE* SystemTable);
 
 #endif

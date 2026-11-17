@@ -10,3 +10,4 @@ VOID LogError(CONST CHAR16* Msg);
 VOID LogRaw(CONST CHAR16* Msg);
 
 #endif 
+#define LogWarning LogWarn

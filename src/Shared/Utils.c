@@ -57,3 +57,23 @@ VOID HexDump(VOID* Ptr, UINTN Size) {
     }
     Print(L"\n");
 }
+
+static EFI_SYSTEM_TABLE* gSystemTable = NULL;
+
+EFI_SYSTEM_TABLE* GetSystemTable(VOID) {
+    return gSystemTable;
+}
+
+VOID SetSystemTable(EFI_SYSTEM_TABLE* SystemTable) {
+    gSystemTable = SystemTable;
+}
+
+static EFI_SYSTEM_TABLE* gSystemTable = NULL;
+
+EFI_SYSTEM_TABLE* GetSystemTable(VOID) {
+    return gSystemTable;
+}
+
+VOID SetSystemTable(EFI_SYSTEM_TABLE* SystemTable) {
+    gSystemTable = SystemTable;
+}

@@ -1,5 +1,6 @@
 #include "EFIWrappers.h"
 #include <Library/UefiBootServicesTableLib.h>
+#include <Library/UefiRuntimeServicesTableLib.h>
 #include <Library/BaseMemoryLib.h>
 
 VOID* EfiAlloc(UINTN Size) {

@@ -1,3 +1,6 @@
+#include <Base.h>
+#include <Library/BaseMemoryLib.h>
+#include <Library/MemoryAllocationLib.h>
 #include "FileMapper.h"
 
 STATIC EFI_SIMPLE_FILE_SYSTEM_PROTOCOL* GetFileSystem()
