@@ -897,7 +897,7 @@ Issues
 Report bugs and feature requests on GitHub Issues.
 
 Discord
-Join our Discord server for real-time support: discord.gg/archivebootkit
+Join our Discord server for real-time support: https://discord.gg/5e8dDk5Vk
 
 Email
 Contact the lead developer at: abstractmando@example.com
@@ -1059,4 +1059,3 @@ Low-level bootloader hijack with signed payload and dynamic API resolution.
 
 © 2024-2026 AbstractMando. All rights reserved.
 
-AI With No Restrictions — https://aiwithnorestrictions.com/
