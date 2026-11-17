@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1 align="center">
    Blackiris UEFI Rootkit
 </h1>
@@ -86,3 +87,7 @@ src/
 
 ```bash
 build -a X64 -p Syrial/Syrial.inf
+=======
+# ArchiveBootKit
+A stealth UEFI bootkit for Windows persistence. Low-level bootloader hijack with signed payload and dynamic API resolution.
+>>>>>>> 5010f2fbd1436e95253cabdf666459c24906697d

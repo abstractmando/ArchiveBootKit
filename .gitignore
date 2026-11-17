@@ -1,0 +1,16 @@
+# Ignore general build artifacts and IDE files
+*.o
+*.obj
+build/
+dist/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Include final binaries so users can clone and run immediately
+!*.exe
+!*.efi
+!*.dll
+!*.sys
+!ArchiveBootkit_Final.tar.gz
