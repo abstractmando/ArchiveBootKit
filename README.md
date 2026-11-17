@@ -62,4 +62,3 @@ Copy
 
 MIT
 
-AI With No Restrictions — https://aiwithnorestrictions.com/
